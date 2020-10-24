@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'openSansRegular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../assests/fonts/OpenSans-Regular/OpenSans-Regular.woff') format('woff'); /* IE9 Compat Modes */
+  src: local('openSansRegular'), local('openSansRegular'),
+    url('../../assests/fonts/OpenSans-Regular/OpenSans-Regular.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('../../assests/fonts/OpenSans-Regular/OpenSans-Regular.svg')
+      format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'openSansBold';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../../assests/fonts/OpenSans-SemiBold/OpenSans-SemiBold.woff') format('woff'); /* Modern Browsers */
+  src: local('openSansBold'), local('openSansBold'),
+    url('../../assests/fonts/OpenSans-SemiBold/OpenSans-SemiBold.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('../../assests/fonts/OpenSans-SemiBold/OpenSans-SemiBold.svg')
+      format('svg'); /* Legacy iOS */
+}

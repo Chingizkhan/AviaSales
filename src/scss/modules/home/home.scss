@@ -1,0 +1,14 @@
+.s-home {
+  .left-side {
+    width: 100%;
+    max-width: 232px;
+    margin-right: 20px;
+  }
+  .right-side {
+    width: 100%;
+    max-width: 502px;
+  }
+  &__wrapper {
+    display: flex;
+  }
+}

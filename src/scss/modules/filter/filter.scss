@@ -1,0 +1,63 @@
+.filter {
+  background-color: #fff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  &__title {
+    line-height: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 20px 20px 10px 20px;
+  }
+
+  &__item {
+    user-select: none;
+    padding: 10px 20px;
+    cursor: url('../../../assests/cursor.png'), pointer;
+    max-height: 40px;
+    &:last-child {
+      padding-bottom: 20px;
+      max-height: 60px;
+    }
+    input {
+      opacity: 0;
+    }
+    label {
+      font-size: 13px;
+      line-height: 20px;
+      position: relative;
+      left: 15px;
+      cursor: url('../../../assests/cursor.png'), pointer;
+      &:before {
+        content: '';
+        border: 1px solid $blue;
+        border-radius: 2px;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        position: absolute;
+        top: -1px;
+        left: -31px;
+      }
+      &:after {
+        width: 12px;
+        height: 8px;
+        display: block;
+        border-left: 2px solid $blue;
+        border-bottom: 2px solid $blue;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 3px;
+        left: -27px;
+      }
+    }
+    input:checked + label:after {
+      content: '';
+    }
+    &:hover {
+      background-color: #f1fcff;
+    }
+  }
+}

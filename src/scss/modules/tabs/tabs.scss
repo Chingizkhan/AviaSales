@@ -1,0 +1,29 @@
+.tabs {
+  margin-bottom: 20px;
+  display: flex;
+  &__item {
+    flex-grow: 1;
+    text-transform: uppercase;
+    padding: 15px 0;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    background-color: white;
+    &--active {
+      background-color: $blue;
+      color: white;
+    }
+  }
+  &__cheap {
+    border: 1px solid #dfe5ec;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+  &__fast {
+    border: 1px solid #dfe5ec;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+}
