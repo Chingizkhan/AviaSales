@@ -26,17 +26,15 @@
     margin-right: 30px;
   }
   &__info {
-    display: flex;
-    justify-content: space-between;
     &__block {
-      max-width: 140px;
+      display: flex;
+      justify-content: space-between;
+      max-width: 462px;
       width: 100%;
+      margin-bottom: 10px;
     }
     &__item {
-      margin-bottom: 10px;
-      &:last-child {
-        margin-bottom: 0;
-      }
+      width: 140px;
     }
     &__title {
       font-weight: 600;
