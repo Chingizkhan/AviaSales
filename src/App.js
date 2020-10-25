@@ -7,14 +7,21 @@ import './scss/main.scss'
 
 function App() {
   const [tab, setTab] = React.useState('cheap')
+  const [data, setData] = React.useState([])
 
   React.useEffect(() => {
-    async function fetchData() {
+    async function fetchID() {
       const response = await fetch('https://front-test.beta.aviasales.ru/search')
       const searchId = await response.json()
-      console.log(searchId);
+      async function fetchData() {
+        const resp = await fetch(`https://front-test.beta.aviasales.ru/tickets?searchId=${searchId.searchId}`)
+        const data = await resp.json()
+        const newData = data.tickets.splice(0, 5)
+        setData(newData)
+      }
+      fetchData()
     }
-    fetchData()
+    fetchID()
   }, [])
 
   const changeTabHandler = () => {
@@ -37,11 +44,11 @@ function App() {
                   tab={tab}
                   onTab={changeTabHandler}
                 />
-                <Ticket />
-                <Ticket />
-                <Ticket />
-                <Ticket />
-                <Ticket />
+                {data.map((item, index) => {
+                  return (
+                    <Ticket {...item} key={`${item}_${index}`} />
+                  )
+                })}
               </div>
             </div>
           </div>
