@@ -3,6 +3,7 @@ import Header from './header/Header'
 import Filter from './filter/Filter'
 import Tabs from './tabs/Tabs';
 import Ticket from './ticket/Ticket';
+import ErrorBoundary from './ErrorBoundary'
 import './scss/main.scss'
 
 function App() {
@@ -44,11 +45,14 @@ function App() {
                   tab={tab}
                   onTab={changeTabHandler}
                 />
-                {data.map((item, index) => {
-                  return (
-                    <Ticket {...item} key={`${item}_${index}`} />
-                  )
-                })}
+                {data === [] ? <h1>Что-то пошло не так, перезагрузите страницу</h1> : null}
+                <ErrorBoundary>
+                  {data.map((item, index) => {
+                    return (
+                      <Ticket {...item} key={`${item}_${index}`} />
+                    )
+                  })}
+                </ErrorBoundary>
               </div>
             </div>
           </div>
